@@ -1,6 +1,6 @@
 /* Global: */
 html {
-  font-size: 16px;
+  font-size: 14px;
 	background-color: #292929;
 	/* background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); */
 	-webkit-font-smoothing: antialiased;
@@ -22,25 +22,41 @@ h2, h3 {
 	margin: auto;
 }
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.3rem;
 	letter-spacing: 0.4rem;
 }
-header {
+/* header {
 	margin: 0 auto;
 	width: 100vw;
 	max-width: 80%;
 	border-bottom: 1px white solid;
-}
+} */
 footer {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-column-gap: 4rem;
-  margin: auto;
 	max-width: 80%;
 	width: 100vw;
-	border-top: 1px white solid;
-	text-transform: uppercase;
-	letter-spacing: 0.5rem;
+  height: 6vh;
+	border-top: 1px #b6b6b6 solid;
+  bottom: 2vh;
+  margin: auto;
+}
+a {
+  grid-column-end: span 1;
+  padding-top: 1vh;
+  text-decoration: none;
+  color: #b6b6b6;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+a:hover {
+  background-color: white;
+  color: #292929;
+}
+footer a.active {
+  opacity: 0;
 }
 .container {
 	display: grid;
@@ -49,7 +65,7 @@ footer {
   margin: auto;
 	max-width: 80%;
 	width: 100vw;
-	height: 70vh;
+	height: 94vh;
 }
 .column {
 	margin: auto;
@@ -62,15 +78,18 @@ footer {
 	margin: 2rem auto;
 }
 ::selection {
-	background: #ffe852;
-	color: #282828;
+	background: #ffffff;
+	color: #292929;
 }
 
 /* M screen size */
 @media screen and (max-width: 1023px) {
 	html {
-		font-size: 12px;
+		font-size: 16px;
 	}
+  a {
+    font-size: 0.8rem;
+  }
 	.container {
 		max-width: 70%;
 	}
@@ -84,18 +103,36 @@ footer {
 /* S screen size */
 @media screen and (max-width: 599px) {
 	html {
-		font-size: 14px;
+		font-size: 18px;
 	}
+  footer {
+    max-width: 100%;
+    border: none;
+  }
+  a {
+    margin: 0 10vw;
+    grid-column-end: span 4;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-bottom: 1px white solid;
+    color: white;
+    font-size: 1rem;
+  }
+  footer a.active {
+    display: none;
+  }
 	.container {
 		max-width: 100%;
 		min-width: 250px;
+    height: auto;
 	}
 	.column {
+    margin: auto 10vw;
 		grid-column-end: span 4;
 		padding: 20vh 0;
 		border-bottom: 1px white solid;
 	}
 	.gfx {
-		width: 70vw;
+		width: 60vw;
 	}
 }
