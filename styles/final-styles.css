@@ -1,6 +1,6 @@
 /* Global: */
 html {
-  font-size: 14px;
+  font-size: 1vw;
 	background-color: #292929;
 	/* background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); */
 	-webkit-font-smoothing: antialiased;
@@ -56,10 +56,14 @@ h4 {
 p {
   font-size: 1.4rem;
   color: #959595;
+  line-height: 2.2rem;
 }
 a {
   text-decoration: none;
   color: inherit;
+}
+.caption {
+  font-size: 1rem;
 }
 p a {
   transition: color 0.3s ease;
@@ -89,14 +93,14 @@ footer a.active {
 	grid-column-end: span 1;
 }
 .text-column {
-	margin: 6vh auto;
+	margin: 10vh auto;
 	grid-column-end: span 2;
   text-align: left;
 }
 .gfx {
 	position: relative;
-	border: 1.5px white solid;
-	width: 15vw;
+	/* border: 1.5px white solid; */
+	width: 13vw;
 	margin: 2vh auto;
 }
 ::selection {
@@ -137,7 +141,7 @@ footer a.active {
     grid-column-end: span 4;
   }
 	.gfx {
-		width: 18vw;
+		width: 15vw;
 	}
 }
 /* S screen size */
@@ -157,6 +161,7 @@ footer a.active {
   }
   p {
     font-size: 0.8rem;
+    line-height: 1.4rem;
   }
   .nav a {
     margin: 0 10vw;
@@ -178,10 +183,13 @@ footer a.active {
 	.column, .text-column {
     margin: auto 10vw;
 		grid-column-end: span 4;
-		padding: 15vh 0;
+		padding: 36vw 0;
 		border-bottom: 1px white solid;
 	}
 	.gfx {
-		width: 60vw;
+		width: 50vw;
 	}
+  .caption {
+    font-size: 0.65rem;
+  }
 }
