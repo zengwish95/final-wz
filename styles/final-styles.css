@@ -40,7 +40,8 @@ footer {
 h1 {
 	font-size: 4rem;
   text-align: left;
-  grid-column-end: span 2;
+  grid-column-end: span 4;
+  line-height: 4.4rem;
 }
 h2, h3 {
 	margin: auto;
@@ -103,6 +104,12 @@ footer a.active {
 	color: #292929;
 }
 
+/* L screen size */
+@media screen and (max-width: 1199px) {
+  .text-column {
+    grid-column-end: span 3;
+  }
+}
 /* M screen size */
 @media screen and (max-width: 1023px) {
 	html {
@@ -111,11 +118,14 @@ footer a.active {
   .nav a {
     font-size: 0.8rem;
   }
+  h1 {
+    line-height: 4rem;
+  }
   footer {
     margin-top: 15vh;
     height: 5vh;
   }
-	.container, .text-container {
+	.container, .text-container header {
 		max-width: 70%;
     height: auto;
 	}
@@ -140,6 +150,7 @@ footer a.active {
   h1 {
     font-size: 2rem;
     grid-column-end: span 4;
+    line-height: 2.3rem;
   }
   h4 {
     font-size: 1.5rem;
@@ -156,9 +167,6 @@ footer a.active {
     color: white;
     font-size: 1rem;
   }
-  header {
-    grid-column-end: span 4;
-  }
   footer a.active {
     display: none;
   }
@@ -170,7 +178,7 @@ footer a.active {
 	.column, .text-column {
     margin: auto 10vw;
 		grid-column-end: span 4;
-		padding: 20vh 0;
+		padding: 15vh 0;
 		border-bottom: 1px white solid;
 	}
 	.gfx {
