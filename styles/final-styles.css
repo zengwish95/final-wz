@@ -2,6 +2,7 @@
 html {
   font-size: 14px;
 	background-color: #292929;
+  min-width: 250px;
 	/* background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%); */
 	-webkit-font-smoothing: antialiased;
   /* substitute full-width punctuations with half-width: */
@@ -31,9 +32,11 @@ header {
 	border-bottom: 1px white solid;
 }
 footer {
-  height: 6vh;
+  height: 3vw;
 	border-top: 1px #b6b6b6 solid;
-  bottom: 2vh;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #292929;
 }
 .container {
 	height: 94vh;
@@ -55,22 +58,27 @@ h2 {
 }
 h4 {
   font-size: 2rem;
+  padding-top: 2vw;
+  margin: auto;
 }
 p {
   font-size: 1.4rem;
   color: #959595;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
+  margin: 1.5vw auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
-.caption {
-  font-size: 1rem;
-}
 p a, h3 a {
   transition: color 0.3s ease;
   border-bottom: 1px #959595 solid;
+}
+h1 a {
+  transition: color 0.3s ease;
 }
 p a:hover {
   color: white;
@@ -80,20 +88,30 @@ h3 a:hover {
   color: #959595;
   border-bottom: none;
 }
+h1 a:hover {
+  color: #959595;
+}
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .nav a {
   grid-column-end: span 1;
-  padding-top: 1vh;
   color: #b6b6b6;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
   cursor: pointer;
+  padding-top: 0.6vw;
 }
 .nav a:hover {
   background-color: white;
   color: #292929;
 }
 footer a.active {
-  opacity: 0;
+  background-color: #323232;
+  color: #b6b6b6;
 }
 .column {
 	margin: auto;
@@ -104,11 +122,17 @@ footer a.active {
 	grid-column-end: span 2;
   text-align: left;
 }
+.article {
+  padding-top: 2.5vw;
+}
 .gfx {
 	position: relative;
 	/* border: 1.5px white solid; */
 	width: 13vw;
 	margin: 2vh auto;
+}
+.caption {
+  font-size: 1rem;
 }
 ::selection {
 	background: #ffffff;
@@ -116,13 +140,13 @@ footer a.active {
 }
 
 /* L screen size */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1299px) {
   .text-column {
     grid-column-end: span 3;
   }
 }
 /* M screen size */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1079px) {
 	html {
 		font-size: 16px;
 	}
@@ -132,9 +156,14 @@ footer a.active {
   h1 {
     line-height: 4rem;
   }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    margin: 3vw auto;
+  }
   footer {
     margin-top: 15vh;
-    height: 5vh;
+    height: 7vw;
   }
 	.container, .text-container header {
 		max-width: 70%;
@@ -145,7 +174,13 @@ footer a.active {
     padding-top: 15vh;
 	}
   .text-column {
-    grid-column-end: span 4;
+    grid-column-end: span 3;
+  }
+  .article {
+    padding-top: 6vw;
+  }
+  .caption {
+    font-size: 0.6rem;
   }
 	.gfx {
 		width: 15vw;
@@ -168,13 +203,17 @@ footer a.active {
   }
   p {
     font-size: 0.8rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
+    margin: 6vw auto;
+  }
+  .nav {
+    position: relative;
   }
   .nav a {
     margin: 0 10vw;
     grid-column-end: span 4;
-    padding-top: 3vh;
-    padding-bottom: 3vh;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     border-bottom: 1px white solid;
     color: white;
     font-size: 1rem;
@@ -193,6 +232,10 @@ footer a.active {
 		padding: 36vw 0;
 		border-bottom: 1px white solid;
 	}
+  .article {
+    padding-top: 10vw;
+    font-size: 1rem;
+  }
 	.gfx {
 		width: 50vw;
 	}
