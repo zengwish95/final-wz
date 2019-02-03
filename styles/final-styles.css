@@ -130,6 +130,7 @@ footer a.active {
 	/* border: 1.5px white solid; */
 	width: 13vw;
 	margin: 2vh auto;
+  text-align: center;
 }
 .caption {
   font-size: 1rem;
@@ -138,6 +139,9 @@ footer a.active {
 	background: #ffffff;
 	color: #292929;
 }
+
+/* Animation Graphics */
+
 
 /* L screen size */
 @media screen and (max-width: 1299px) {
