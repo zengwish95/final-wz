@@ -15,6 +15,7 @@ html {
 }
 body {
 	font-family: source-han-serif-sc, serif;
+  font-weight: 600;
 	color: white;
 	margin: 0;
 	text-align: center;
@@ -63,6 +64,7 @@ h4 {
 }
 p {
   font-size: 1.4rem;
+  font-weight: 600;
   color: #959595;
   line-height: 2.4rem;
   margin: 1.5vw auto;
