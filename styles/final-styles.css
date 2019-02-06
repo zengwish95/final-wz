@@ -140,6 +140,9 @@ footer a.active {
 .caption {
   font-size: 1rem;
 }
+.hanging {
+  text-indent: -0.7rem;
+}
 ::selection {
 	background: #ffffff;
 	color: #292929;
